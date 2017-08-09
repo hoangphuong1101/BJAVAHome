@@ -2,60 +2,69 @@ package hoangnq6.day2.candidate;
 
 import java.util.Date;
 
-/**			
- * FresherCandidate			
- *			
- * Version 1.0			
- *			
- * Date: 08-08-2017			
- *			
- * Copyright 			
- *			
- * Modification Logs:			
- * DATE                 AUTHOR          DESCRIPTION			
- * -----------------------------------------------------------------------			
- * 08-08-2017         HoangNQ6            Create			
+/**
+ * FresherCandidate
+ * 
+ * Version 1.0
+ * 
+ * Date: 08-08-2017
+ * 
+ * Copyright
+ * 
+ * Modification Logs: DATE AUTHOR DESCRIPTION
+ * -----------------------------------------------------------------------
+ * 08-08-2017 HoangNQ6 Create
  */
-public class FresherCandidate extends Candidate{
+public class FresherCandidate extends Candidate {
 	private Date graduationDate;
 	private String graduationRank;
 	private String education;
+
 	/**
 	 * @return the graduationDate
 	 */
 	public Date getGraduationDate() {
 		return graduationDate;
 	}
+
 	/**
-	 * @param graduationDate the graduationDate to set
+	 * @param graduationDate
+	 *            the graduationDate to set
 	 */
 	public void setGraduationDate(Date graduationDate) {
 		this.graduationDate = graduationDate;
 	}
+
 	/**
 	 * @return the graduationRank
 	 */
 	public String getGraduationRank() {
 		return graduationRank;
 	}
+
 	/**
-	 * @param graduationRank the graduationRank to set
+	 * @param graduationRank
+	 *            the graduationRank to set
 	 */
 	public void setGraduationRank(String graduationRank) {
 		this.graduationRank = graduationRank;
 	}
+
 	/**
 	 * @return the education
 	 */
 	public String getEducation() {
 		return education;
 	}
+
 	/**
-	 * @param education the education to set
+	 * @param education
+	 *            the education to set
 	 */
 	public void setEducation(String education) {
 		this.education = education;
 	}
+
 	/**
 	 * @param firstName
 	 * @param lastName
@@ -75,5 +84,13 @@ public class FresherCandidate extends Candidate{
 		this.graduationRank = graduationRank;
 		this.education = education;
 	}
-	
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "firstName: " + this.getFirstName() + "\n lastName: " + this.getLastName() + "\n birthDate: "
+				+ this.getBirthDate() + "\n address: " + this.getAddress() + "\n phone: " + this.getPhone()
+				+ "\n email: " + this.getMail() + "\n candidateType: " + this.getCandidateType() + "\n graduationDate: "
+				+ this.graduationDate + "\n graduationRank: " + this.graduationRank + "\n education: " + this.education;
+	}
 }
