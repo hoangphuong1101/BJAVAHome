@@ -2,131 +2,157 @@ package hoangnq6.day2.candidate;
 
 import java.util.Date;
 
-/**			
- * Candidate			
- *			
- * Version 1.0			
- *			
- * Date: 08-08-2017			
- *			
- * Copyright 			
- *			
- * Modification Logs:			
- * DATE                 AUTHOR          DESCRIPTION			
- * -----------------------------------------------------------------------			
- * 08-08-2017         HoangNQ6            Create			
+/**
+ * Candidate
+ * 
+ * Version 1.0
+ * 
+ * Date: 08-08-2017
+ * 
+ * Copyright
+ * 
+ * Modification Logs: DATE AUTHOR DESCRIPTION
+ * -----------------------------------------------------------------------
+ * 08-08-2017 HoangNQ6 Create
  */
 public class Candidate {
-	private String firstName;
-	private String lastName;
+	private String candidateID;
+	private String fullName;
 	private Date birthDate;
-	private String address;
 	private String phone;
-	private String mail;
+	private String email;
 	private String candidateType;
+	static int canidateCount;
+
 	/**
-	 * @return the firstName
+	 * @return the candidateID
 	 */
-	public String getFirstName() {
-		return firstName;
+	public String getCandidateID() {
+		return candidateID;
 	}
+
 	/**
-	 * @param firstName the firstName to set
+	 * @param candidateID
+	 *            the candidateID to set
 	 */
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setCandidateID(String candidateID) {
+		this.candidateID = candidateID;
 	}
+
 	/**
-	 * @return the lastName
+	 * @return the fullName
 	 */
-	public String getLastName() {
-		return lastName;
+	public String getFullName() {
+		return fullName;
 	}
+
 	/**
-	 * @param lastName the lastName to set
+	 * @param fullName
+	 *            the fullName to set
 	 */
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
+
 	/**
 	 * @return the birthDate
 	 */
 	public Date getBirthDate() {
 		return birthDate;
 	}
+
 	/**
-	 * @param birthDate the birthDate to set
+	 * @param birthDate
+	 *            the birthDate to set
 	 */
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}
-	/**
-	 * @return the address
-	 */
-	public String getAddress() {
-		return address;
-	}
-	/**
-	 * @param address the address to set
-	 */
-	public void setAddress(String address) {
-		this.address = address;
-	}
+
 	/**
 	 * @return the phone
 	 */
 	public String getPhone() {
 		return phone;
 	}
+
 	/**
-	 * @param phone the phone to set
+	 * @param phone
+	 *            the phone to set
 	 */
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 	/**
-	 * @return the mail
+	 * @return the email
 	 */
-	public String getMail() {
-		return mail;
+	public String getEmail() {
+		return email;
 	}
+
 	/**
-	 * @param mail the mail to set
+	 * @param email
+	 *            the email to set
 	 */
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
+
 	/**
 	 * @return the candidateType
 	 */
 	public String getCandidateType() {
 		return candidateType;
 	}
+
 	/**
-	 * @param candidateType the candidateType to set
+	 * @param candidateType
+	 *            the candidateType to set
 	 */
 	public void setCandidateType(String candidateType) {
 		this.candidateType = candidateType;
 	}
+
 	/**
-	 * @param firstName
-	 * @param lastName
-	 * @param birthDate
-	 * @param address
-	 * @param phone
-	 * @param mail
-	 * @param candidateType
+	 * @return the canidateCount
 	 */
-	public Candidate(String firstName, String lastName, Date birthDate, String address, String phone, String mail,
-			String candidateType) {
+	public int getCanidateCount() {
+		return canidateCount;
+	}
+
+	/**
+	 * @param candidateID
+	 * @param fullName
+	 * @param birthDate
+	 * @param phone
+	 * @param email
+	 * @param candidateType
+	 * @param canidateCount
+	 */
+	public Candidate(String candidateID, String fullName, Date birthDate, String phone, String email,
+			String candidateType, int canidateCount) {
 		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.candidateID = candidateID;
+		this.fullName = fullName;
 		this.birthDate = birthDate;
-		this.address = address;
 		this.phone = phone;
-		this.mail = mail;
+		this.email = email;
 		this.candidateType = candidateType;
 	}
-	
+
+	/**
+	 * đếm số lượng ứng viên nhập vào
+	 * @param candidateCount
+	 */
+	public void numberCadidate(int candidateCount){
+		canidateCount++;
+	}
+	public String showInfo () {
+		// TODO Auto-generated method stub
+		return "candidateID: " + this.getCandidateID() + "\n fullName: " + this.getFullName() + "\n birthDate: "
+				+ this.getBirthDate() + "\n phone: " + this.getPhone()
+				+ "\n email: " + this.getEmail() + "\n candidateType: " + this.getCandidateType() + "\n canidateCount: "
+				+ this.getCanidateCount();
+	}
 }
